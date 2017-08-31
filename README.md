@@ -1,6 +1,6 @@
 # Coursera Dump
 
-Take info about courses from coursera.org
+Take info about courses from coursera.org and save to file
 
 # How to Install
 
@@ -20,8 +20,13 @@ Enter filepath with filename to save file
 
 # Output
 
+When work is done - printed "Work is done!"
+
 File with info about courses:
+
 Name, language, start_date, duration, rating
+
+
 
 # Project Goals
 
