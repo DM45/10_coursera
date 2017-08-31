@@ -10,10 +10,10 @@ def get_full_url_courses_list():
     url = 'https://www.coursera.org/sitemap~www~courses.xml'
     req_data = requests.get(url)
     courses_data = etree.fromstring(req_data.content)
-    for ElementTree in courses_data.getchildren():
-        for elem in ElementTree.getchildren():
-            if elem.text:
-                url_courses_list.append(elem.text)
+    for up_elem in courses_data.getchildren():
+        for down_elem in up_elem.getchildren():
+            if down_elem.text:
+                url_courses_list.append(down_elem.text)
     return url_courses_list
 
 
@@ -31,7 +31,7 @@ def get_course_info(list_of_random_url_courses):
         url = elem
         req_data = requests.get(url)
         soup = BeautifulSoup(req_data.text, "lxml")
-        name = (soup.find("h2", {
+        courses_name = (soup.find("h2", {
             "class": "headline-4-text course-title"})).text
         language = (
                 soup.find("div", {"class": "rc-Language"})).text
@@ -48,7 +48,7 @@ def get_course_info(list_of_random_url_courses):
             	"class": "ratings-text bt3-visible-xs"})).text
         except AttributeError:
             rating = ""
-        courses_info.append([name, language, start_date, duration, rating])
+        courses_info.append([courses_name, language, start_date, duration, rating])
     return courses_info
 
 
