@@ -1,6 +1,27 @@
 # Coursera Dump
 
-[TODO. There will be project description]
+Take info about courses from coursera.org
+
+# How to Install
+
+Python 3 should be already installed. Then use pip (or pip3 if there is a conflict with old Python 2 setup) to install dependencies:
+
+```bash
+pip install -r requirements.txt # alternatively try pip3
+```
+
+# How it work
+```bash
+python coursera.py
+```
+```bash
+Enter filepath with filename to save file
+```
+
+# Output
+
+File with info about courses:
+Name, language, start_date, duration, rating
 
 # Project Goals
 
