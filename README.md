@@ -24,7 +24,7 @@ When work is done - printed "Work is done!"
 
 File with info about courses:
 
-Name, language, start_date, duration, rating
+Name, language, start date, duration, rating
 
 
 
