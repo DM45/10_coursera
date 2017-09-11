@@ -15,7 +15,7 @@ pip install -r requirements.txt # alternatively try pip3
 python coursera.py
 ```
 ```bash
-Enter filepath with filename to save file
+File with data about courses saved as courses_info.xlsx in current filepath
 ```
 
 # Output
